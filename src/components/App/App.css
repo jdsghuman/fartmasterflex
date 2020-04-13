@@ -40,7 +40,6 @@ body {
   width: 90%;
   max-width: 575px;
   position: relative;
-  min-height: 100vh;
 }
 
 .heading-container {
