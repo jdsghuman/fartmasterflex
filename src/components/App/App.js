@@ -1,24 +1,20 @@
 import React from 'react';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
 import './App.css';
 import Home from '../Home/Home';
 import About from '../About/About';
 import ProcessFart from '../ProcessFart/ProcessFart';
-import ReactGA from 'react-ga';
-import auth from './auth.ts';
-import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
 
 const trackingId = "UA-163519116-1";
 ReactGA.initialize(trackingId);
-ReactGA.set({
-  userId: auth.currentUserId(),
-});
 
 history.listen(location => {
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
 });
 
 const App = () => {
