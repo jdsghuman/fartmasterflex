@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Logo from '../Logo/Logo';
 import aboutStyles from './About.module.scss';
 import Footer from '../Footer/Footer';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={'container-fluid'}>
       <div className={'container-main'}>
