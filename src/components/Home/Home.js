@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
+import Seo from '../Seo/Seo';
 import homeStyles from './Home.module.scss';
+import Layout from '../Layout/Layout';
 import Button from '../Button/Button';
 import SliderItem from '../Slider/SliderItem';
 import Logo from '../Logo/Logo';
@@ -44,45 +46,43 @@ const Home = ({ selectedFart, selectedTimer }) => {
   }, []);
 
   return (
-    <div className={'container-fluid'}>
-      <div className={'container-main'}>
-        <div className={'heading-container'}>
-          <Logo />
-          <h1 className={'txt-heading'}>Fartmaster Flex</h1>
-        </div>
-        <h3 className={homeStyles.steps}>Select fart:</h3>
-        <div className={homeStyles['scroll-container']}>
-          <SliderItem
-            items={fartSounds}
-            handleClick={handleClickFart}
-            selected={selectedFart}
-            isFart
-          />
-        </div>
-        <h3 className={homeStyles.steps}>Select timer:</h3>
-        <div className={cx('scroll-container', 'scroll-container-timer')}>
-          <SliderItem
-            items={fartTimer}
-            handleClick={handleClickTimer}
-            selected={selectedTimer}
-            isTimer
-          />
-        </div>
-        <div className={"btn-checkout-container"}>
-          <Button
-            type="button"
-            handleClick={handleStartFartTimer}
-            selectedFart={selectedFart}
-            selectedTimer={selectedTimer}
-            primary
-          >
-            {/* <AddIcon className={classes.btnIcon} /> */}
-            Start Fart Timer
-            </Button>
-        </div>
-        <Footer />
+    <Layout>
+      <Seo title="FartMasterFlex" />
+      <div className={'heading-container'}>
+        <Logo />
+        <h1 className={'txt-heading'}>Fartmaster Flex</h1>
       </div>
-    </div>
+      <h3 className={homeStyles.steps}>Select fart:</h3>
+      <div className={homeStyles['scroll-container']}>
+        <SliderItem
+          items={fartSounds}
+          handleClick={handleClickFart}
+          selected={selectedFart}
+          isFart
+        />
+      </div>
+      <h3 className={homeStyles.steps}>Select timer:</h3>
+      <div className={cx('scroll-container', 'scroll-container-timer')}>
+        <SliderItem
+          items={fartTimer}
+          handleClick={handleClickTimer}
+          selected={selectedTimer}
+          isTimer
+        />
+      </div>
+      <div className={"btn-checkout-container"}>
+        <Button
+          type="button"
+          handleClick={handleStartFartTimer}
+          selectedFart={selectedFart}
+          selectedTimer={selectedTimer}
+          primary
+        >
+          Start Fart Timer
+            </Button>
+      </div>
+      <Footer />
+    </Layout>
   );
 }
 

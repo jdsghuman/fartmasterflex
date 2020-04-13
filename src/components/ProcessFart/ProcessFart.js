@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
 import classNames from 'classnames/bind';
+import Layout from '../Layout/Layout';
+import Seo from '../Seo/Seo';
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
 import Icon from '../Utility/Icons/Icon';
@@ -57,34 +59,33 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
   }, []);
 
   return (
-    <div className={'container-fluid'}>
-      <div className={'container-main'}>
-        <div className={'heading-container'}>
-          <Logo />
-          <h1 className={'txt-heading'}>Fart Mix Processing</h1>
-        </div>
-        <div className={cx("item", {
-          "item-process": buttonName === 'Cancel Fart Mix',
-        })}>
-          <Icon identifier='record'
-            viewBox='0 0 512 512'
-            dimensions={{ width: 140, height: 140 }}
-            fill="#e82e37"
-          />
-        </div>
-        <TimerDisplay counter={counter} setCounter={setCounter} />
-        <div className={"btn-checkout-container"}>
-          <Button
-            type="button"
-            handleClick={handleCancelFart}
-            {...buttonClass}
-          >
-            {buttonName}
-          </Button>
-        </div>
-        <Footer />
+    <Layout>
+      <Seo title="Processing | FartMasterFlex" />
+      <div className={'heading-container'}>
+        <Logo />
+        <h1 className={'txt-heading'}>Fart Mix Processing</h1>
       </div>
-    </div>
+      <div className={cx("item", {
+        "item-process": buttonName === 'Cancel Fart Mix',
+      })}>
+        <Icon identifier='record'
+          viewBox='0 0 512 512'
+          dimensions={{ width: 140, height: 140 }}
+          fill="#e82e37"
+        />
+      </div>
+      <TimerDisplay counter={counter} setCounter={setCounter} />
+      <div className={"btn-checkout-container"}>
+        <Button
+          type="button"
+          handleClick={handleCancelFart}
+          {...buttonClass}
+        >
+          {buttonName}
+        </Button>
+      </div>
+      <Footer />
+    </Layout>
   )
 }
 
