@@ -11,6 +11,7 @@ import processStyles from './ProcessFart.module.scss';
 import { cancelFart, convertMillisToMinutesAndSeconds, getTimer } from '../Utility/Data';
 import Footer from '../Footer/Footer';
 import TimerDisplay from './TimerDisplay/TimerDisplay';
+import ShareIcon from '../SocialMedia/ShareIcon';
 
 const cx = classNames.bind(processStyles);
 
@@ -46,6 +47,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
   }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (!selectedFart || !selectedTimer) {
       history.push('/');
     }
@@ -84,6 +86,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
           {buttonName}
         </Button>
       </div>
+      <ShareIcon />
       <Footer />
     </Layout>
   )

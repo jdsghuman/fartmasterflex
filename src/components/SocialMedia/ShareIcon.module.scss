@@ -1,0 +1,48 @@
+.share-txt-container {
+  text-align: center;
+}
+
+.share-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.share-icon-btn {
+  margin-left: 6px;
+  margin-right: 6px;
+  outline: none;
+}
+
+.share-txt-title {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.btn-share {
+  margin: 0 auto;
+  padding: 0 10px;
+  padding-right: 1px;
+  outline: 0;
+  cursor: pointer;
+  font-size: .9rem;
+  letter-spacing: 1.1px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  border: 1px solid #000000;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.btn-share:hover {
+  background-color: rgb(247, 244, 244);
+}
+
+.heading {
+  margin-bottom: 8px;
+  padding-top: 5px;
+  font-family: 'Staatliches', cursive;
+  font-size: 1rem;
+  color: #e82e37;
+}
