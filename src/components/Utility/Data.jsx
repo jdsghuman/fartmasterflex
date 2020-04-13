@@ -4,8 +4,6 @@ import loudFarts from "../FartSounds/loud-farts.mp3";
 import yoCheckYourPants from "../FartSounds/yo-check-pants.mp3";
 import bombDrop from "../FartSounds/bomb-drop.mp3";
 
-// const fartSound = new Audio(hot97);
-
 export const fartSounds = [
   {
     key: 1,

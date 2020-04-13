@@ -46,8 +46,8 @@
 }
 
 .item-title-clicked {
-  background: rgba(0, 0, 0, 0.2);
-  color: #333333;
+  background: #e0c5c5;
+  color: #e82e37;
 }
 
 .item-price {

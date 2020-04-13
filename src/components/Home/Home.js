@@ -1,38 +1,41 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import homeStyles from './Home.module.scss';
 import Button from '../Button/Button';
 import SliderItem from '../Slider/SliderItem';
 import Logo from '../Logo/Logo';
-import { fartSounds } from '../Utility/Data';
-import { fartTimer } from '../Utility/Data';
-import { makeFartNow } from '../Utility/Data';
+import { fartSounds, fartTimer, makeFartNow } from '../Utility/Data';
 import classNames from 'classnames/bind';
-
+import { RESET_FART, RESET_TIMER, SET_FART, SET_TIMER } from '../../redux/actionTypes';
 
 const cx = classNames.bind(homeStyles);
 
-const Home = () => {
-  const [selectedFart, setSelectedFart] = useState('');
-  const [selectedTimer, setSelectedTimer] = useState('');
+const Home = ({ selectedFart, selectedTimer }) => {
+  let history = useHistory();
+  const dispatch = useDispatch();
 
   const handleClickFart = (name) => {
-    setSelectedFart(name);
+    dispatch({ type: SET_FART, payload: name });
     makeFartNow(name);
 
   }
   const handleClickTimer = (name) => {
-    console.log('fart timer');
-    setSelectedTimer(name, selectedTimer);
+    dispatch({ type: SET_TIMER, payload: name });
   }
 
   const handleStartFartTimer = () => {
     console.log('start timer');
+    if (selectedFart && selectedTimer) {
+      history.push('/makefart');
+    }
   }
 
   const resetFarts = () => {
-    setSelectedFart('');
-    setSelectedTimer('');
+    dispatch({ type: RESET_FART });
+    dispatch({ type: RESET_TIMER });
   }
 
   useEffect(() => {
@@ -67,22 +70,25 @@ const Home = () => {
           />
         </div>
         <div className={homeStyles["btn-checkout-container"]}>
-          <Link to="/makefart">
-            <Button
-              type="button"
-              onClick={handleStartFartTimer}
-              selectedFart={selectedFart}
-              selectedTimer={selectedTimer}
-              primary
-            >
-              {/* <AddIcon className={classes.btnIcon} /> */}
-              Start Fart Timer
+          <Button
+            type="button"
+            handleClick={handleStartFartTimer}
+            selectedFart={selectedFart}
+            selectedTimer={selectedTimer}
+            primary
+          >
+            {/* <AddIcon className={classes.btnIcon} /> */}
+            Start Fart Timer
             </Button>
-          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  selectedFart: state.fartReducer,
+  selectedTimer: state.timerReducer
+});
+
+export default connect(mapStateToProps)(Home);
