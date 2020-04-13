@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Quicksand:400,500,700|Staatliches&display=swap');
+
+body {
+  font-family: sans-serif, Tahoma, Geneva, Verdana;
+  margin: 0px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}

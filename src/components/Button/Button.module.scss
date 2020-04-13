@@ -1,0 +1,23 @@
+.button {
+  margin: 20px auto;
+  padding: 0.8em 1.4em;
+  border: 2px solid #e82e37;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.2s all ease-in;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  color: #e82e37;
+  &-primary {
+    align-self: center;
+    font-family: "Saira", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  &-enabled {
+    background: #e82e37;
+    color: #ffffff;
+  }
+}
