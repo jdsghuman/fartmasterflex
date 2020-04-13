@@ -6,14 +6,17 @@ import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
 import Icon from '../Utility/Icons/Icon';
 import processStyles from './ProcessFart.module.scss';
-import { cancelFart, getTimer } from '../Utility/Data';
+import { cancelFart, convertMillisToMinutesAndSeconds, getTimer } from '../Utility/Data';
 import Footer from '../Footer/Footer';
+import TimerDisplay from './TimerDisplay/TimerDisplay';
 
 const cx = classNames.bind(processStyles);
 
 const ProcessFart = ({ selectedFart, selectedTimer }) => {
   const [buttonName, setButtonName] = useState('Cancel Fart Mix');
   const [buttonClass, setButtonClass] = useState({ primary: 'primary' });
+  const [counter, setCounter] = useState(null);
+
   let history = useHistory();
   let process = '';
   const handleCancelFart = () => {
@@ -28,6 +31,17 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
       setButtonClass({ continueButton: 'continue' });
     }, fartTimer);
   }
+
+  useEffect(() => {
+    const timer =
+      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+    console.log('timer', counter)
+    return () => clearInterval(timer);
+  }, [counter]);
+
+  useEffect(() => {
+    setCounter(convertMillisToMinutesAndSeconds(selectedTimer));
+  }, []);
 
   useEffect(() => {
     if (!selectedFart || !selectedTimer) {
@@ -57,6 +71,10 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
             dimensions={{ width: 140, height: 140 }}
             fill="#e82e37"
           />
+        </div>
+        <div>
+          <TimerDisplay counter={counter} setCounter={setCounter} />
+          {/* {counter} */}
         </div>
         <div className={"btn-checkout-container"}>
           <Button

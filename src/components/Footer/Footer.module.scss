@@ -15,20 +15,19 @@ footer {
 }
 
 .ftr-copyright {
-  font-family: Pacifico, Quicksand;
+  font-family: 'Staatliches', cursive;
   font-size: 0.8rem;
   border-top: 1px solid #e82e37;
   padding-top: 5px;
   color: #e82e37;
 }
 
-.icon-info {
-  border: 1px solid #e82e37;
+.icon {
   position: absolute;
   bottom: 0;
-  left: 0;
   margin: 10px;
   padding: 5px;
+  border: 1px solid #e82e37;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s all ease-in;
@@ -36,9 +35,10 @@ footer {
     background: #601a1d;
   }
 }
+.info {
+  left: 0; 
+}
 
-// @media only screen and (max-width: 575px) {
-//   .icon-info {
-//     margin-bottom: 80px;
-//   }
-// }
+.email {
+  right: 0;
+}

@@ -2,6 +2,9 @@ import React from 'react'
 import { useHistory } from 'react-router';
 import footerStyles from './Footer.module.scss';
 import Icon from '../Utility/Icons/Icon';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(footerStyles);
 
 const Footer = () => {
   let history = useHistory();
@@ -14,16 +17,29 @@ const Footer = () => {
   const handleAbout = () => {
     history.push('/about');
   }
+
   return (
     <footer>
-      <div onClick={handleAbout} className={footerStyles["icon-info"]}>
-          <Icon identifier='info'
-            viewBox='0 0 300 512'
-            dimensions={{ width: 20, height: 20 }}
-            fill="#e82e37"
-          />
-        </div>
+      <div onClick={handleAbout} className={cx(footerStyles.icon, footerStyles.info)}>
+        <Icon identifier='info'
+          viewBox='0 0 300 512'
+          dimensions={{ width: 20, height: 20 }}
+          fill="#e82e37"
+        />
+      </div>
       <div className={footerStyles["ftr-copyright"]}>FartMasterFlex &copy; {getCopyrightYear()}</div>
+      <div className={cx(footerStyles.icon, footerStyles.email)}>
+      <a
+          href={`mailto:fart@fartmasterflex.com?subject=Farts`}
+          target="_blank"
+          rel="noopener noreferrer">
+      <Icon identifier='email'
+          viewBox='0 0 500 512'
+          dimensions={{ width: 20, height: 20 }}
+          fill="#e82e37"
+        />
+        </a>
+      </div>
     </footer>
   )
 }

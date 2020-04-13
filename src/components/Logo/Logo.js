@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { RESET_FART, RESET_TIMER } from '../../redux/actionTypes';
+import { cancelFart } from '../Utility/Data';
 
 import logoStyles from './Logo.module.scss';
 
@@ -13,6 +14,7 @@ const Logo = () => {
     history.push('/');
     dispatch({ type: RESET_FART });
     dispatch({ type: RESET_TIMER });
+    cancelFart();
   }
   return (
     <h3 onClick={resetFarts} className={logoStyles.logo}>fM</h3>

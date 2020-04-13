@@ -37,23 +37,23 @@ export const fartSounds = [
 export const fartTimer = [
   {
     key: 1,
-    name: "15sec",
+    name: "10 sec",
   },
   {
     key: 2,
-    name: "30sec",
+    name: "15 sec",
   },
   {
     key: 3,
-    name: "1min",
+    name: "30 sec",
   },
   {
     key: 4,
-    name: "1min 30secs",
+    name: "45 sec",
   },
   {
     key: 5,
-    name: "2mins",
+    name: "1 min",
   },
 ];
 
@@ -81,19 +81,26 @@ export const makeFart = (name, timer) => {
 
 export const getTimer = (timer) => {
   switch (timer) {
-    case "15sec":
+    case "10 sec":
+      return 10000;
+    case "15 sec":
       return 15000;
-    case "30sec":
+    case "30 sec":
       return 30000;
-    case "1min":
-      return 60000;
-    case "1min 30secs":
-      return 90000;
-    case "2mins":
-      return 120000;
+    case "45 sec":
+      return 45000;
+    case "1 min":
+      return 59000;
     default:
       return 0;
   }
 };
 
 export const cancelFart = () => clearTimeout(fartTimeout);
+
+export const convertMillisToMinutesAndSeconds = (time) => {
+  const millis = getTimer(time);
+  // var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000);
+  return seconds;
+}
