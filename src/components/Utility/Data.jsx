@@ -4,6 +4,8 @@ import loudFarts from "../FartSounds/loud-farts.mp3";
 import yoCheckYourPants from "../FartSounds/yo-check-pants.mp3";
 import bombDrop from "../FartSounds/bomb-drop.mp3";
 
+let fartTimeout = '';
+
 export const fartSounds = [
   {
     key: 1,
@@ -72,15 +74,15 @@ export const makeFartNow = (name) => {
 };
 
 export const makeFart = (name, timer) => {
-  return setTimeout(() => {
-    fartSounds[0].media.play();
+  fartTimeout = setTimeout(() => {
+    makeFartNow(name);
   }, getTimer(timer));
 };
 
-const getTimer = (timer) => {
+export const getTimer = (timer) => {
   switch (timer) {
     case "15sec":
-      return 15000;
+      return 2000;
     case "30sec":
       return 30000;
     case "1min":
@@ -93,3 +95,5 @@ const getTimer = (timer) => {
       return 0;
   }
 };
+
+export const cancelFart = () => clearTimeout(fartTimeout);

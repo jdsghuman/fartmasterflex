@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import homeStyles from './Home.module.scss';
 import Button from '../Button/Button';
 import SliderItem from '../Slider/SliderItem';
 import Logo from '../Logo/Logo';
-import { fartSounds, fartTimer, makeFartNow } from '../Utility/Data';
+import { fartSounds, fartTimer, makeFart, makeFartNow } from '../Utility/Data';
 import classNames from 'classnames/bind';
 import { RESET_FART, RESET_TIMER, SET_FART, SET_TIMER } from '../../redux/actionTypes';
+import Footer from '../Footer/Footer';
 
 const cx = classNames.bind(homeStyles);
 
@@ -27,8 +27,8 @@ const Home = ({ selectedFart, selectedTimer }) => {
   }
 
   const handleStartFartTimer = () => {
-    console.log('start timer');
     if (selectedFart && selectedTimer) {
+      makeFart(selectedFart, selectedTimer);
       history.push('/makefart');
     }
   }
@@ -43,13 +43,11 @@ const Home = ({ selectedFart, selectedTimer }) => {
   }, []);
 
   return (
-    <div className={homeStyles['container-fluid']}>
-      <div className={homeStyles['container-main']}>
-        <div className={homeStyles['heading-container']}>
-          <Link to="/">
-            <Logo click={resetFarts} />
-          </Link>
-          <h1 className={homeStyles['txt-heading']}>Fartmaster Flex</h1>
+    <div className={'container-fluid'}>
+      <div className={'container-main'}>
+        <div className={'heading-container'}>
+          <Logo />
+          <h1 className={'txt-heading'}>Fartmaster Flex</h1>
         </div>
         <h3 className={homeStyles.steps}>Select fart:</h3>
         <div className={homeStyles['scroll-container']}>
@@ -69,7 +67,7 @@ const Home = ({ selectedFart, selectedTimer }) => {
             isTimer
           />
         </div>
-        <div className={homeStyles["btn-checkout-container"]}>
+        <div className={"btn-checkout-container"}>
           <Button
             type="button"
             handleClick={handleStartFartTimer}
@@ -81,6 +79,7 @@ const Home = ({ selectedFart, selectedTimer }) => {
             Start Fart Timer
             </Button>
         </div>
+        <Footer />
       </div>
     </div>
   );

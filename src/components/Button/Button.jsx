@@ -10,6 +10,7 @@ const Button = ({
   handleClick,
   type,
   className,
+  continueButton,
   primary,
   accent,
   selectedFart,
@@ -21,6 +22,7 @@ const Button = ({
       onClick={handleClick}
       className={cx("button", className, {
         "button-primary": primary,
+        "button-continue": continueButton,
         "button-accent": accent,
         "button-enabled": `${selectedFart && selectedTimer}`
       })}

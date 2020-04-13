@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
 import Home from '../Home/Home';
+import About from '../About/About';
 import ProcessFart from '../ProcessFart/ProcessFart';
 
 const App = () => {
@@ -12,11 +13,16 @@ const App = () => {
           path="/"
           exact
           component={Home}
-          />
+        />
         <Route
           path="/makefart"
           exact
           component={ProcessFart}
+        />
+        <Route
+          path="/about"
+          exact
+          component={About}
         />
       </Switch>
     </Router>

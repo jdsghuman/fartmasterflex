@@ -1,0 +1,44 @@
+footer {
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  margin-top: 40px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image__logo--footer {
+  width: 125px;
+}
+
+.ftr-copyright {
+  font-family: Pacifico, Quicksand;
+  font-size: 0.8rem;
+  border-top: 1px solid #e82e37;
+  padding-top: 5px;
+  color: #e82e37;
+}
+
+.icon-info {
+  border: 1px solid #e82e37;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+  &:hover {
+    background: #601a1d;
+  }
+}
+
+// @media only screen and (max-width: 575px) {
+//   .icon-info {
+//     margin-bottom: 80px;
+//   }
+// }

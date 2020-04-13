@@ -1,0 +1,23 @@
+.item {
+  margin: 40px auto;
+  align-self: center;
+}
+
+.item-process {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

@@ -9,15 +9,24 @@
   outline: none;
   cursor: pointer;
   background: none;
+  font-family: "Saira", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
   color: #e82e37;
   &-primary {
     align-self: center;
-    font-family: "Saira", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
+  }
+  &-continue {
+    background: none !important;
+    &:hover {
+      background: #601a1d !important;
+    }
   }
   &-enabled {
     background: #e82e37;
     color: #ffffff;
+    &:hover {
+      background: #601a1d;
+    }
   }
 }

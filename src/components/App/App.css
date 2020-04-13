@@ -20,3 +20,66 @@ body {
   height: 100%;
   position: relative;
 }
+
+.container-fluid {
+  background: #f4f6f8;
+  height: 100% !important;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  background: #333;
+  width: 90%;
+  max-width: 575px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.txt-heading {
+  margin-bottom: 0;
+  align-self: center;
+  font-family: 'Saira', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in;
+}
+
+.btn-checkout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .container-main {
+    width: 100%;
+    border-radius: unset;
+  }
+  .container-fluid {
+    align-items: unset;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .txt-heading {
+    font-size: 1.5rem;
+    margin-left: 35px;
+  }
+}
