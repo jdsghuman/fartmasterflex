@@ -78,7 +78,7 @@ const Home = ({ selectedFart, selectedTimer }) => {
           selectedTimer={selectedTimer}
           primary
         >
-          Start Fart Timer
+          Start Fart Mix
             </Button>
       </div>
       <Footer />

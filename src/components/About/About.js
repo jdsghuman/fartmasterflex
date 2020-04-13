@@ -21,6 +21,13 @@ const About = () => {
         build this site during the corona virus. I want to build games
         when I get older. I also like farts.
         </p>
+        <h3 className={aboutStyles.heading}>Fart Timer:</h3>
+        <p className={aboutStyles.timer}>
+        Pick a fart, set the timer, and run! This app will hopefully 
+        give you something to laught at during the covid-19 stay at home
+        quarantine. It'll also get your family off the couch after 
+        they hear someone fart! 
+        </p>
       <Footer />
     </Layout>
   )
