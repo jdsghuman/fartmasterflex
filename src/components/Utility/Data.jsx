@@ -82,7 +82,7 @@ export const makeFart = (name, timer) => {
 export const getTimer = (timer) => {
   switch (timer) {
     case "15sec":
-      return 2000;
+      return 15000;
     case "30sec":
       return 30000;
     case "1min":
