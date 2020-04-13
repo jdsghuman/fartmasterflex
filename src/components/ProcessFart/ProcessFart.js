@@ -72,10 +72,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
             fill="#e82e37"
           />
         </div>
-        <div>
-          <TimerDisplay counter={counter} setCounter={setCounter} />
-          {/* {counter} */}
-        </div>
+        <TimerDisplay counter={counter} setCounter={setCounter} />
         <div className={"btn-checkout-container"}>
           <Button
             type="button"

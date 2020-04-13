@@ -39,6 +39,7 @@ const Home = ({ selectedFart, selectedTimer }) => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     resetFarts();
   }, []);
 
