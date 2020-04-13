@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/fartmasterflex/static/css/main.33221f3e.chunk.css",
+    "main.js": "/fartmasterflex/static/js/main.4c917738.chunk.js",
+    "main.js.map": "/fartmasterflex/static/js/main.4c917738.chunk.js.map",
+    "runtime-main.js": "/fartmasterflex/static/js/runtime-main.f1e76b5e.js",
+    "runtime-main.js.map": "/fartmasterflex/static/js/runtime-main.f1e76b5e.js.map",
+    "static/js/2.6fbe87eb.chunk.js": "/fartmasterflex/static/js/2.6fbe87eb.chunk.js",
+    "static/js/2.6fbe87eb.chunk.js.map": "/fartmasterflex/static/js/2.6fbe87eb.chunk.js.map",
+    "index.html": "/fartmasterflex/index.html",
+    "precache-manifest.8dfe27935279ffc7536058ff8fc382d7.js": "/fartmasterflex/precache-manifest.8dfe27935279ffc7536058ff8fc382d7.js",
+    "service-worker.js": "/fartmasterflex/service-worker.js",
+    "static/css/main.33221f3e.chunk.css.map": "/fartmasterflex/static/css/main.33221f3e.chunk.css.map",
+    "static/js/2.6fbe87eb.chunk.js.LICENSE.txt": "/fartmasterflex/static/js/2.6fbe87eb.chunk.js.LICENSE.txt",
+    "static/media/bomb-drop.mp3": "/fartmasterflex/static/media/bomb-drop.7f0f51b4.mp3",
+    "static/media/full-throttle.mp3": "/fartmasterflex/static/media/full-throttle.0c2eea46.mp3",
+    "static/media/hot-97.mp3": "/fartmasterflex/static/media/hot-97.46c918e7.mp3",
+    "static/media/loud-farts.mp3": "/fartmasterflex/static/media/loud-farts.2e33d75c.mp3",
+    "static/media/yo-check-pants.mp3": "/fartmasterflex/static/media/yo-check-pants.455e9118.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f1e76b5e.js",
+    "static/js/2.6fbe87eb.chunk.js",
+    "static/css/main.33221f3e.chunk.css",
+    "static/js/main.4c917738.chunk.js"
+  ]
+}
