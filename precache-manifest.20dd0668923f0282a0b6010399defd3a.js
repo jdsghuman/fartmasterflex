@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b92d463ed3381a97f8e41be887dd4d98",
+    "revision": "2d8f91b5c89b8b9c6e62d9c1a4f2663b",
     "url": "/fartmasterflex/index.html"
   },
   {
-    "revision": "1cb09fbd64532cd7d9d3",
-    "url": "/fartmasterflex/static/css/main.17d299d9.chunk.css"
+    "revision": "c42a94a49b7da9d71694",
+    "url": "/fartmasterflex/static/css/main.95eabc89.chunk.css"
   },
   {
-    "revision": "bf2750e81e330d10c467",
-    "url": "/fartmasterflex/static/js/2.ec7da28a.chunk.js"
+    "revision": "8ca20cbd88924f7c31e8",
+    "url": "/fartmasterflex/static/js/2.8977270d.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/fartmasterflex/static/js/2.ec7da28a.chunk.js.LICENSE.txt"
+    "url": "/fartmasterflex/static/js/2.8977270d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1cb09fbd64532cd7d9d3",
-    "url": "/fartmasterflex/static/js/main.f1b1507d.chunk.js"
+    "revision": "c42a94a49b7da9d71694",
+    "url": "/fartmasterflex/static/js/main.7bb47234.chunk.js"
   },
   {
     "revision": "ed59261c493ee52799d2",
