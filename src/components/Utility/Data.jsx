@@ -9,7 +9,7 @@ let fartTimeout = '';
 export const fartSounds = [
   {
     key: 1,
-    name: "Hot 97",
+    name: "Hot #2",
     media: new Audio(hot97),
   },
   {
@@ -60,7 +60,7 @@ export const fartTimer = [
 export const makeFartNow = (name) => {
   // eslint-disable-next-line default-case
   switch (name) {
-    case "Hot 97":
+    case "Hot #2":
       return fartSounds[0].media.play();
     case "Full Throttle":
       return fartSounds[1].media.play();
