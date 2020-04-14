@@ -12,6 +12,7 @@ import { fartSounds, fartTimer, makeFart, makeFartNow } from '../Utility/Data';
 import classNames from 'classnames/bind';
 import { RESET_FART, RESET_TIMER, SET_FART, SET_TIMER } from '../../redux/actionTypes';
 import Footer from '../Footer/Footer';
+import ShareIcon from '../SocialMedia/ShareIcon';
 
 const cx = classNames.bind(homeStyles);
 
@@ -81,6 +82,7 @@ const Home = ({ selectedFart, selectedTimer }) => {
           Start Fart Mix
             </Button>
       </div>
+      <ShareIcon />
       <Footer />
     </Layout>
   );
