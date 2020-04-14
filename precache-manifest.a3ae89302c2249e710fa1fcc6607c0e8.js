@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "143cdc23e92d01ec2d779a368aa5317a",
+    "revision": "4c1ea6098a754e1b30de96d614f21690",
     "url": "/fartmasterflex/index.html"
   },
   {
-    "revision": "04c5468d39067f942f09",
+    "revision": "a9323d94f828915af021",
     "url": "/fartmasterflex/static/css/main.db96d1f5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fartmasterflex/static/js/2.b998d126.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "04c5468d39067f942f09",
-    "url": "/fartmasterflex/static/js/main.2ab2d748.chunk.js"
+    "revision": "a9323d94f828915af021",
+    "url": "/fartmasterflex/static/js/main.565da528.chunk.js"
   },
   {
     "revision": "ed59261c493ee52799d2",
