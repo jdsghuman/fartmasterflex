@@ -37,6 +37,30 @@
   color: #e82e37;
 }
 
+.required {
+  display: none;
+  font-size: .8rem;
+  margin-left: 5px;
+  background: #fff;
+  border-radius: 2px;
+  padding: 2px;
+  padding-right: 3px;
+}
+
+.required-show {
+  display: inline-block;
+  animation: slideInRight .2s ease-in backwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(800%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .checkout-container {
   display: flex;
   flex-direction: row;

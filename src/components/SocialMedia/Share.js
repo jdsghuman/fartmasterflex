@@ -1,6 +1,5 @@
 import React from 'react';
-import classNames from 'classnames/bind';
-import shareIconStyles from './ShareIcon.module.scss';
+import styles from './Share.module.scss';
 
 import {
   EmailShareButton,
@@ -14,18 +13,16 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-const cx = classNames.bind(shareIconStyles);
-
-const ShareIcon = () => {
+const Share = () => {
   const url = 'www.fartmasterflex.com';
   const displayIcons = () => {
     return (
-      <div className={shareIconStyles["share-icon-container"]}>
+      <div className={styles["share-icon-container"]}>
         <FacebookShareButton
           url={url}
           quote={`FartMasterFlex - Share a fart`}
           hashtag={"fartMasterFlex"}
-          className={shareIconStyles['share-icon-btn']}
+          className={styles['share-icon-btn']}
         >
           <FacebookIcon
             size={'2rem'}
@@ -35,14 +32,14 @@ const ShareIcon = () => {
         <EmailShareButton
           url={url}
           subject={"Check out FartMasterFlex!"}
-          className={shareIconStyles['share-icon-btn']}
+          className={styles['share-icon-btn']}
         >
           <EmailIcon size={'2rem'} round />
         </EmailShareButton>
         <WhatsappShareButton
           url={url}
           quote={"Check out FartMasterFlex"}
-          className={shareIconStyles['share-icon-btn']}
+          className={styles['share-icon-btn']}
         >
           <WhatsappIcon
             size={"2rem"}
@@ -53,11 +50,11 @@ const ShareIcon = () => {
     )
   }
   return (
-    <div className={shareIconStyles['share-txt-container']}>
-      <div className={shareIconStyles.heading}>Share a fart</div>
+    <div className={styles['share-txt-container']}>
+      <div className={styles.heading}>Share a fart</div>
       {displayIcons()}
     </div>
   )
 }
 
-export default ShareIcon;
+export default Share;

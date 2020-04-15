@@ -11,7 +11,7 @@ import processStyles from './ProcessFart.module.scss';
 import { cancelFart, convertMillisToMinutesAndSeconds, getTimer } from '../Utility/Data';
 import Footer from '../Footer/Footer';
 import TimerDisplay from './TimerDisplay/TimerDisplay';
-import ShareIcon from '../SocialMedia/ShareIcon';
+import Share from '../SocialMedia/Share';
 
 const cx = classNames.bind(processStyles);
 
@@ -38,7 +38,6 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
   useEffect(() => {
     const timer =
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-    console.log('timer', counter)
     return () => clearInterval(timer);
   }, [counter]);
 
@@ -86,7 +85,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
           {buttonName}
         </Button>
       </div>
-      <ShareIcon />
+      <Share />
       <Footer />
     </Layout>
   )
