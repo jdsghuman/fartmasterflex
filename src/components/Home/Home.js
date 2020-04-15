@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
@@ -20,26 +20,47 @@ const Home = ({ selectedFart, selectedTimer }) => {
   let history = useHistory();
   const dispatch = useDispatch();
 
+  const [activeFartRequired, setActiveFartRequired] = useState(false);
+  const [activeTimerRequired, setActiveTimerRequired] = useState(false);
+
   const handleClickFart = (name) => {
     dispatch({ type: SET_FART, payload: name });
+    setActiveFartRequired(false);
     makeFartNow(name);
 
   }
   const handleClickTimer = (name) => {
     dispatch({ type: SET_TIMER, payload: name });
+    setActiveTimerRequired(false);
   }
 
   const handleStartFartTimer = () => {
     if (selectedFart && selectedTimer) {
       makeFart(selectedFart, selectedTimer);
       history.push('/makefart');
+    } else {
+      if (!selectedFart) {
+        setActiveFartRequired(true);
+      }
+      if (!selectedTimer) {
+        setActiveTimerRequired(true);
+      }
     }
   }
 
   const resetFarts = () => {
     dispatch({ type: RESET_FART });
     dispatch({ type: RESET_TIMER });
+    setActiveFartRequired(false);
+    setActiveTimerRequired(false);
   }
+
+  useEffect(() => {
+    if (selectedFart && selectedTimer) {
+      setActiveFartRequired(false);
+      setActiveTimerRequired(false);
+    }
+  }, [selectedFart, selectedTimer]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -53,7 +74,9 @@ const Home = ({ selectedFart, selectedTimer }) => {
         <Logo />
         <h1 className={'txt-heading'}>Fartmaster Flex</h1>
       </div>
-      <h3 className={homeStyles.steps}>Select fart:</h3>
+      <h3 className={homeStyles.steps}>Select fart: <span className={cx("required", {
+        "required-show": activeFartRequired
+      })}>*Required</span></h3>
       <div className={homeStyles['scroll-container']}>
         <SliderItem
           items={fartSounds}
@@ -62,7 +85,9 @@ const Home = ({ selectedFart, selectedTimer }) => {
           isFart
         />
       </div>
-      <h3 className={homeStyles.steps}>Select timer:</h3>
+      <h3 className={homeStyles.steps}>Select timer: <span className={cx("required", {
+        "required-show": activeTimerRequired
+      })}>*Required</span></h3>
       <div className={cx('scroll-container', 'scroll-container-timer')}>
         <SliderItem
           items={fartTimer}

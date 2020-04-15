@@ -38,7 +38,6 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
   useEffect(() => {
     const timer =
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-    console.log('timer', counter)
     return () => clearInterval(timer);
   }, [counter]);
 
