@@ -67,7 +67,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
         <h1 className={'txt-heading'}>Fart Mix Processing</h1>
       </div>
       <div className={cx("item", {
-        "item-process": buttonName === 'Cancel Fart Mix',
+        "item-process": buttonName === 'Cancel Fart Timer',
       })}>
         <Icon identifier='record'
           viewBox='0 0 512 512'
