@@ -4,7 +4,7 @@ import loudFarts from "../FartSounds/loud-farts.mp3";
 import yoCheckYourPants from "../FartSounds/yo-check-pants.mp3";
 import bombDrop from "../FartSounds/bomb-drop.mp3";
 
-let fartTimeout = '';
+let fartTimeout;
 
 export const fartSounds = [
   {
@@ -70,6 +70,25 @@ export const makeFartNow = (name) => {
       return fartSounds[3].media.play();
     case "Bomb Drop":
       return fartSounds[4].media.play();
+  }
+};
+
+export const makeFartNowSilent = (name) => {
+  if (name === 'Hot #2') {
+    fartSounds[0].media.play();
+    fartSounds[0].media.pause();
+  } else if (name === 'Full Throttle') {
+    fartSounds[1].media.play();
+    fartSounds[1].media.pause();
+  } else if (name === 'Loud Farts') {
+    fartSounds[2].media.play();
+    fartSounds[2].media.pause();
+  } else if (name === 'Yo! Check yo pants') {
+    fartSounds[3].media.play();
+    fartSounds[3].media.pause();
+  } else if (name === 'Bomb Drop') {
+    fartSounds[4].media.play();
+    fartSounds[4].media.pause();
   }
 };
 
