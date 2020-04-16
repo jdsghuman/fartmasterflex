@@ -31,7 +31,7 @@ const About = () => {
         home quarantine. It'll also get your family off the couch 
         after they hear someone fart!<br/>
         </p>
-        <span class={cx('timer', 'sneak')}>Press the volume button in the homepage nav and activate sneak
+        <span class={cx('timer', 'sneak')}>Press the mute button in the homepage nav and activate sneak
           attack mode!</span>
       <Footer />
     </Layout>
