@@ -16,7 +16,7 @@ import Share from '../SocialMedia/Share';
 const cx = classNames.bind(processStyles);
 
 const ProcessFart = ({ selectedFart, selectedTimer }) => {
-  const [buttonName, setButtonName] = useState('Cancel Fart Mix');
+  const [buttonName, setButtonName] = useState('Cancel Fart Timer');
   const [buttonClass, setButtonClass] = useState({ primary: 'primary' });
   const [counter, setCounter] = useState(null);
 
@@ -64,7 +64,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
       <Seo title="Processing | FartMasterFlex" />
       <div className={'heading-container'}>
         <Logo />
-        <h1 className={'txt-heading'}>Fart Mix Processing</h1>
+        <h1 className={'txt-heading'}>Processing Fart</h1>
       </div>
       <div className={cx("item", {
         "item-process": buttonName === 'Cancel Fart Timer',
