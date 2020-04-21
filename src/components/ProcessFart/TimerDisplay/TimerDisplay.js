@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'
-import classNames from 'classnames/bind';
 import timerStyles from './TimerDisplay.module.scss';
-
-const cx = classNames.bind(timerStyles);
 
 const TimerDisplay = ({ counter, setCounter }) => {
 
