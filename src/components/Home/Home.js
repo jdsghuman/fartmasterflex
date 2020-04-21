@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
+import PWAPrompt from 'react-ios-pwa-prompt';
 import Seo from '../Seo/Seo';
 import styles from './Home.module.scss';
 import Layout from '../Layout/Layout';
@@ -74,6 +75,9 @@ const Home = ({ selectedFart, selectedTimer, sneakMode }) => {
   return (
     <Layout>
       <Seo title="FartMasterFlex" />
+      <PWAPrompt
+        copyBody={'FartMasterFlex has app functionality. Add it to your home screen to use it in fullscreen and while offline.'}
+      />
       <div className={'heading-container'}>
         <Logo />
         <h1 className={'txt-heading'}>Fartmaster Flex</h1>
