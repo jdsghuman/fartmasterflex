@@ -14,7 +14,7 @@ footer {
 }
 
 .ftr-copyright {
-  font-family: 'Staatliches', sans-serif;
+  font-family: "Staatliches", sans-serif;
   font-size: 0.8rem;
   border-top: 1px solid #e82e37;
   padding-top: 5px;
@@ -24,18 +24,23 @@ footer {
 .icon {
   position: absolute;
   bottom: 0;
-  margin: 10px;
+  margin: 14px;
   padding: 5px;
+  height: 35px;
   border: 1px solid #e82e37;
-  border-radius: 5px;
+  background: none;
+  border-radius: 2px;
   cursor: pointer;
   transition: 0.2s all ease-in;
+  font-family: "Staatliches", sans-serif;
+  font-size: 1rem;
+  color: #e82e37;
   &:hover {
     background: #601a1d;
   }
 }
 .info {
-  left: 0; 
+  left: 0;
 }
 
 .email {

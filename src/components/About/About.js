@@ -19,19 +19,19 @@ const About = () => {
         <Logo />
         <h1 className={'txt-heading'}>About Me</h1>
       </div>
-      <p className={styles['about-txt']}>
+      <p className={cx('text', 'text__about')}>
         Hi, my name is Simran and I am 6 years old. My dad helped me
         build this site during the corona virus. I want to build games
         when I get older. I also like farts.
         </p>
         <h3 className={styles.heading}>Fart Timer:</h3>
-        <p className={styles.timer}>
+        <p className={styles.text}>
         Pick a fart, set the timer, and run! This app will hopefully 
         give you something to laugh about during the covid-19 stay at 
         home quarantine. It'll also get your family off the couch 
         after they hear someone fart!<br/>
         </p>
-        <span class={cx('timer', 'sneak')}>Press the mute button in the homepage nav and activate sneak
+        <span className={cx('text', 'sneak')}>Press the mute button in the homepage nav and activate sneak
           attack mode!</span>
       <Footer />
     </Layout>

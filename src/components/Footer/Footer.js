@@ -20,15 +20,16 @@ const Footer = () => {
 
   return (
     <footer>
-      <div onClick={handleAbout} className={cx(footerStyles.icon, footerStyles.info)}>
+      <button onClick={handleAbout} className={cx(footerStyles.icon, footerStyles.info)}>
         <Icon identifier='info'
           viewBox='0 0 300 512'
-          dimensions={{ width: 20, height: 20 }}
+          dimensions={{ width: 12, height: 12 }}
           fill="#e82e37"
         />
-      </div>
+        About
+      </button>
       <div className={footerStyles["ftr-copyright"]}>FartMasterFlex &copy; {getCopyrightYear()}</div>
-      <div className={cx(footerStyles.icon, footerStyles.email)}>
+      <button className={cx(footerStyles.icon, footerStyles.email)}>
       <a
           href={`mailto:fart@fartmasterflex.com?subject=Farts`}
           target="_blank"
@@ -39,7 +40,7 @@ const Footer = () => {
           fill="#e82e37"
         />
         </a>
-      </div>
+      </button>
     </footer>
   )
 }
