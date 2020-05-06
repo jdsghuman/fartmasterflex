@@ -114,7 +114,7 @@ const Home = ({ selectedFart, selectedTimer, sneakMode }) => {
           selectedTimer={selectedTimer}
           primary
         >
-          Set Fart Timer
+          Start Fart Timer
             </Button>
       </div>
       <Share />

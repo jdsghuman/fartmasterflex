@@ -30,7 +30,7 @@ const ProcessFart = ({ selectedFart, selectedTimer }) => {
   const startProcessing = () => {
     const fartTimer = getTimer(selectedTimer);
     process = setTimeout(() => {
-      setButtonName('Create New Fart Remix');
+      setButtonName('Create New Fart Timer');
       setButtonClass({ continueButton: 'continue' });
     }, fartTimer);
   }
