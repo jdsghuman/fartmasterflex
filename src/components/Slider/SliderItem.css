@@ -6,21 +6,19 @@
   align-items: center;
   width: 250px;
   height: 150px;
-  background: rgba(209, 209, 209, 1);
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cedce7+0,596a72+78;Grey+3D+%231 */
-  background: #cedce7; /* Old browsers */
-  background: -moz-linear-gradient(top, #cedce7 0%, #596a72 78%); /* FF3.6-15 */
+  background: #492a2a; /* Old browsers */
+  background: -moz-linear-gradient(top, #cedce7 0%, #492a2a 78%); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
     #cedce7 0%,
-    #596a72 78%
+    #492a2a 78%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
     #cedce7 0%,
-    #596a72 78%
+    #492a2a 78%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#492a2a',GradientType=0 ); /* IE6-9 */
 
   margin-left: 5px;
   margin-right: 5px;
@@ -35,26 +33,19 @@
 }
 
 .item-timer {
+  width: 150px;
   height: 80px;
 }
 
 .item-title {
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.4);
   padding: 4px 8px;
   border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .item-title-clicked {
-  background: #e0c5c5;
   color: #e82e37;
-}
-
-.item-price {
-  align-self: flex-start;
-  position: absolute;
-  right: 0;
-  margin-right: 12px;
 }
 
 .item-selected-txt {
@@ -62,9 +53,4 @@
   left: 0;
   top: 0;
   margin: 4px;
-}
-
-.icon-cupcake {
-  position: absolute;
-  top: 30%;
 }
